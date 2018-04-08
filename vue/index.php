@@ -82,30 +82,7 @@
   <h3 class="margin">Who Am I?</h3>
   <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
   <h3>I'm an adventurer</h3>
-  <?php
-    function getUserIP()
-{
-    $client  = @$_SERVER['HTTP_CLIENT_IP'];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $remote  = $_SERVER['REMOTE_ADDR'];
-
-    if(filter_var($client, FILTER_VALIDATE_IP))
-    {
-        $ip = $client;
-    }
-    elseif(filter_var($forward, FILTER_VALIDATE_IP))
-    {
-        $ip = $forward;
-    }
-    else
-    {
-        $ip = $remote;
-    }
-   return $ip;
-}
-$user_ip = getUserIP();
-echo "<p>". Your Ip address . $user_ip ."</p>"; // Output IP address [Ex: 177.87.193.134]
-?>
+ 
   
 </div>
 
